@@ -1,0 +1,50 @@
+html{
+    display:block; 
+    width: 100%; 
+    height: 100%; 
+    padding: 0px; 
+    margin: 0px
+}
+
+body{
+    display:block; 
+    width: 100%; 
+    height: 100%; 
+    padding: 0px; 
+    margin: 0px
+}
+#container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 
+        [full-start] minmax(1em, 1fr)
+        [main-start] minmax(0, 40em) [main-end]
+        minmax(1em, 1fr) [full-end];
+    grid-template-rows: 
+        [fullr-start] minmax(1em, 1fr)
+        [mainr-start] minmax(0, 40em) [mainr-end]
+        minmax(1em, 1fr) [fullr-end];
+}
+
+#display {
+    display: flex;
+    flex-direction: column;
+    grid-column: main;
+    grid-row: mainr;
+    font-size: 6vw;
+
+}
+#title {
+    display: flex;
+    text-align: center;
+    display: block;
+}
+canvas {
+    display: block;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
+}
